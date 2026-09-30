@@ -6,7 +6,7 @@ import { getMeta, reverseHandle } from '@/lib/registry';
 
 // The install funnel: what a pasted /claim/<id> link unfurls into. Built from the public
 // vouch id alone. The claim code rides in the URL fragment (#k=…), which no server ever
-// receives; the oldest links' ?s= query reaches the page request, never this one. The
+// receives; the oldest links' `?s=` query reaches the page request, never this one. The
 // route takes only `params` and reads only public chain state, so the image can neither
 // carry nor reveal the code. See opengraph-image.test.tsx.
 export const runtime = 'nodejs';
