@@ -3,6 +3,10 @@ import { ogResolve, ogCard } from '@/lib/og-card';
 import { loadFont } from '@/lib/og-assets';
 import { routeHandle } from '@/lib/metadata';
 
+// Chain reads go through the Stellar SDK's fetch; without this Next caches them in the Data
+// Cache forever, so the profile card would never change after its first render.
+export const fetchCache = 'default-no-store';
+
 // The artifact every shared /u/<handle> link unfurls into — resolves the handle
 // on-chain and renders the published face, bio and scores (shared builder in lib/og-card).
 export const runtime = 'nodejs';
