@@ -19,20 +19,7 @@ const publicDir = join(webDir, 'public');
  * Unreferenced files still waiting to be deleted for #506. Delete a file, then drop it from
  * this list; a file that is gone but still listed fails the test so the list stays honest.
  */
-const PENDING_REMOVAL: readonly string[] = [
-  'assets/backgrounds/app-bg.png',
-  'assets/backgrounds/landing-hero.png',
-  'assets/brand/wordmark-dark.png',
-  'assets/brand/wordmark.png',
-  'assets/centerpieces/centerpiece-passport.png',
-  'assets/portrait-kit/alignment/01.png',
-  'deck/app-m.png',
-  'deck/how-m.png',
-  'deck/landing-m.png',
-  'deck/leaderboard-m.png',
-  'deck/stats-d.png',
-  'deck/stats-m.png',
-];
+const PENDING_REMOVAL: readonly string[] = [];
 
 function walk(dir: string): string[] {
   return readdirSync(dir).flatMap((name) => {
