@@ -71,7 +71,7 @@ export default async function ScorePage({ params, searchParams }: ScorePageProps
         {net && <ReadOnlyBanner network={net.network} />}
         <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-primary/80">{'// not_found'}</p>
         <div className="mt-6 flex flex-col items-center gap-4 text-center">
-          <StateArt kind="empty-leaderboard" size={300} className="motion-safe:animate-float" />
+          <StateArt kind="empty-leaderboard" size={300} priority className="motion-safe:animate-float" />
           <h1 className="font-display text-2xl font-semibold">No reputation yet</h1>
           <p className="text-muted-foreground">
             This address hasn&apos;t earned any Social XP, Earned XP, or completed any quests yet.
